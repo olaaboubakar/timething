@@ -204,7 +204,7 @@ def align_long(
     cfg = utils.load_config(language, k_shingles, local_files_only=offline)
 
     # read in the transcript
-    with open(transcript_file, "r") as f:
+    with open(transcript_file, "r", encoding="utf-8") as f:
         transcript = f.read()
         transcript = " ".join(transcript.lower().splitlines())
 
